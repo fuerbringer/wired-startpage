@@ -1,0 +1,27 @@
+{
+  "name": "wired-startpage",
+  "description": "(Yet another) startpage/homepage inspired by The Wired from SEL.",
+  "version": "0.0.0",
+  "license": "AGPL-3.0",
+  "scripts": {
+    "start": "grunt & node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "bootstrap": "~3.3.7",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jquery": "^3.2.1",
+    "less-middleware": "~2.2.0",
+    "morgan": "~1.8.1",
+    "pug": "~2.0.0-beta11",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-run": "^0.7.0"
+  }
+}
