@@ -1,0 +1,25 @@
+{
+  "columnWidth": 3,
+  "columns": {
+    "Image boards": [
+      {
+        "title": "Lainchan",
+        "url": "https://lainchan.org"
+      },
+      {
+        "title": "Fullchan",
+        "url": "https://8ch.net"
+      }
+    ],
+    "Programming": [
+      {
+        "title": "Hacker News",
+        "url": "https://news.ycombinator.com"
+      },
+      {
+        "title": "Lobsters",
+        "url": "https://lobste.rs"
+      }
+    ]
+  }
+}
