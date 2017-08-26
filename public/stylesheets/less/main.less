@@ -1,13 +1,43 @@
+@wired-header: #7fdd57;
 @wired-txt: #999999;
 @wired-link: #999999;
 @wired-bg: #1E1E1E;
 
+@wired-font-header: loveletter;
+@wired-font-text: pixeloperator;
+
+@font-face {
+  font-family: "loveletter";
+  src: url(/fonts/love_letter_typewriter.ttf);
+}
+
+@font-face {
+  font-family: "pixeloperator";
+  src: url(/fonts/pixel_operator.ttf);
+}
+
+@font-face {
+  font-family: "opensans";
+  src: url(opensans_regular.ttf);
+}
+
 body {
   color: @wired-txt;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 22px @wired-font-text, sans-serif;
   background-color: @wired-bg;
 }
+
+h1, h2, h3, h4 {
+  color: @wired-header;
+  font-family: @wired-font-header, sans-serif;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
 
 a {
   color: @wired-link;
 }
+

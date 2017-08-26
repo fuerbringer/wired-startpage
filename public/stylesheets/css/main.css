@@ -1,1 +1,1 @@
-body{color:#999999;font:14px "Lucida Grande",Helvetica,Arial,sans-serif;background-color:#1E1E1E}a{color:#999999}
+@font-face{font-family:"loveletter";src:url(/fonts/love_letter_typewriter.ttf)}@font-face{font-family:"pixeloperator";src:url(/fonts/pixel_operator.ttf)}@font-face{font-family:"opensans";src:url(opensans_regular.ttf)}body{color:#999999;font:22px pixeloperator,sans-serif;background-color:#1E1E1E}h1,h2,h3,h4{color:#7fdd57;font-family:loveletter,sans-serif}h1{font-size:36px}h2{font-size:24px}h3{font-size:20px}h4{font-size:18px}a{color:#999999}
