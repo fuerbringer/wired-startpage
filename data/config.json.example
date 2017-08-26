@@ -1,5 +1,15 @@
 {
   "pageTitle": "The Wired Startpage",
   "columnWidth": 3,
-  "mergeFrontendFiles": false
+  "mergeFrontendFiles": false,
+  "overlayImages": {
+    "top": {
+      "left": "",
+      "right": ""
+    },
+    "bottom": {
+      "left": "smug.png",
+      "right": ""
+    }
+  }
 }

@@ -1,3 +1,44 @@
+/* IMAGE OVERLAYS *************************************************************/
+img.overlay-image {
+  position: fixed;
+  min-height: 256px;
+  height: 40vh;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* MOBILE IMAGE OVERLAYS END **************************************************/
+@media screen and (max-width: 575px) {
+  img.overlay-image {
+    min-width: 128px;
+    width: 66vw;
+    min-height: auto;
+    height: auto;
+  }
+}
+
+img.overlay-image-top-left {
+  top: 0;
+  right: 0;
+}
+
+img.overlay-image-top-right {
+  top: 0;
+  left: 0;
+}
+
+img.overlay-image-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+
+img.overlay-image-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+/* IMAGE OVERLAYS END *********************************************************/
+
+/* GLITCH OVERLAYS ************************************************************/
 #overlay {
   opacity: 0.65;
   position: fixed;
@@ -42,3 +83,4 @@
   animation-iteration-count: infinite;
   animation-timing-function: steps(4);
 }
+/* GLITCH OVERLAYS END ********************************************************/

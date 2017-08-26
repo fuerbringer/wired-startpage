@@ -1,2 +1,6 @@
+for row, vIndex in cfgData.overlayImages
+  for imgSrc, hIndex in row
+    if imgSrc != ''
+      img.img-responsive.overlay-image(class="overlay-image-" + vIndex + "-" + hIndex, src="/images/static-assets/" + imgSrc)
 div#overlay
 div#overlay2
