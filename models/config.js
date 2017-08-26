@@ -8,4 +8,4 @@ Config.prototype.getColumnWidth = function() {
   return this.data['columnWidth']
 }
 
-module.exports = Config;
+module.exports = Config

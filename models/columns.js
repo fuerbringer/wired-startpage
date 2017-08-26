@@ -8,4 +8,4 @@ Columns.prototype.getAllColumns = function() {
   return this.data.columns
 }
 
-module.exports = Columns;
+module.exports = Columns
