@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p #{title} is work in progress
+  h1= cfgData.pageTitle
+  p #{cfgData.pageTitle} is work in progress
+
+  .row
+    for col, title in colsData.columns
+      div(class="col-xs-12 col-sm-" + cfgData.columnWidth)
+        h2= title
+        ol
+          for page in col
+            li: a(href=page.url)= page.title
