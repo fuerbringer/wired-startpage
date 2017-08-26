@@ -1,4 +1,5 @@
 {
   "pageTitle": "The Wired Startpage",
   "columnWidth": 3,
+  "mergeFrontendFiles": false
 }
