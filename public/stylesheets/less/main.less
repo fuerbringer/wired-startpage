@@ -2,7 +2,11 @@
 @wired-txt: #999999;
 @wired-link: #999999;
 @wired-bg: #1E1E1E;
+@wired-column-bg: #333333;
+@wired-column-border: rgba(0, 0, 0, 0.0) calc(1vw / 2) solid;
+@wired-column-border-mobile: rgba(0, 0, 0, 0.0) 10px solid;
 
+/* FONTS **********************************************************************/
 @wired-font-header: loveletter;
 @wired-font-text: pixeloperator;
 
@@ -20,6 +24,7 @@
   font-family: "opensans";
   src: url(opensans_regular.ttf);
 }
+/* FONTS END ******************************************************************/
 
 body {
   color: @wired-txt;
@@ -32,12 +37,43 @@ h1, h2, h3, h4 {
   font-family: @wired-font-header, sans-serif;
 }
 
-h1 { font-size: 36px; }
-h2 { font-size: 24px; }
-h3 { font-size: 20px; }
-h4 { font-size: 18px; }
+div.header h1 { font-size: 36px; }
+div.column h2 { font-size: 24px; }
+div.column h3 { font-size: 20px; }
+div.column h4 { font-size: 18px; }
 
-a {
+a, a:link, a:visited {
   color: @wired-link;
 }
 
+a:hover, a:active {
+  color: @wired-header;
+  text-decoration: none;
+}
+
+/* HEADER SECTION *************************************************************/
+div.header {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 991px) {
+  div.column h2 { font-size: 20px; }
+  div.column h3 { font-size: 18px; }
+  div.column h4 { font-size: 16px; }
+}
+
+/* COLUMN BOXES ***************************************************************/
+div.column {
+  min-height: 256px;
+  background-color: @wired-column-bg;
+  border: @wired-column-border;
+  background-clip: padding-box;
+}
+
+@media screen and (max-width: 767px) {
+  div.column {
+    border: @wired-column-border-mobile;
+  }
+}

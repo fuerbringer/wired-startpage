@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  h1= cfgData.pageTitle
-  p #{cfgData.pageTitle} is work in progress
+  .row.header: .col-xs-12
+    h1= cfgData.pageTitle
+    p #{cfgData.pageTitle} is work in progress
 
   .row
     for col, title in colsData.columns
-      div(class="col-xs-12 col-sm-" + cfgData.columnWidth)
-        h2= title
-        ol
+      div.column(class="col-xs-12 col-sm-" + cfgData.columnWidth)
+        h2.column-title= title
+        ol.column-list
           for page in col
-            li: a(href=page.url)= page.title
+            li.column-entry: a(href=page.url)= page.title
