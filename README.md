@@ -2,6 +2,12 @@
 
 A simple, stupid startpage inspired by [SEL](https://en.wikipedia.org/wiki/Serial_Experiments_Lain). Design ~~blatantly stolen from~~ heavily inspired by [Lainchan](https://lainchan.org).
 
+Columns and entries are easily added or customized via the `columns.json` file.
+
+## Screenshot
+
+![Screenshot](https://raw.githubusercontent.com/fuerbringer/wired-startpage/master/screenshot.png)
+
 ## Installation
 
 ### Step 1
