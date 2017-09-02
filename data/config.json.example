@@ -1,5 +1,6 @@
 {
   "pageTitle": "The Wired Startpage",
+  "pageDescription": "Welcome to the Wired Startpage",
   "columnWidth": 3,
   "mergeFrontendFiles": false,
   "overlayImages": {

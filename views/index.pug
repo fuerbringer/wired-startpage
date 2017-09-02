@@ -3,7 +3,7 @@ extends layout
 block content
   .row.header: .col-xs-12
     h1= cfgData.pageTitle
-    p #{cfgData.pageTitle} is work in progress
+    p= cfgData.pageDescription
 
   .row
     for col, title in colsData.columns
