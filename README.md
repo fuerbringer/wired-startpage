@@ -10,7 +10,28 @@ Columns and entries are easily added or customized via the `columns.json` file.
 
 ## Installation
 
-### Step 1
+### Docker
+
+Run this if you've got Docker set up.
+
+#### Step 1
+
+```
+docker build -t fuerbringer/wired-startpage .
+```
+
+#### Step 2
+
+Then run the container.
+
+```
+docker run -d --name wired-startpage -v $PWD/data:/usr/src/app/data fuerbringer/wired-startpage
+```
+
+
+### Manual
+
+#### Step 1
 
 Pull and install.
 
@@ -19,7 +40,7 @@ git clone https://github.com/fuerbringer/wired-startpage.git
 npm install
 ```
 
-### Step 2
+#### Step 2
 
 Edit config and data files.
 
@@ -28,7 +49,7 @@ cp data/config.json.example data/config.json
 cp data/columns.json.example data/columns.json
 ```
 
-### Step 3
+#### Step 3
 
 Run
 
