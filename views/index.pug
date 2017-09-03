@@ -6,7 +6,7 @@ block content
     p= cfgData.pageDescription
 
   for row in rows
-    .row
+    .row.row-equal-height
       for col, i in row
         div.column(class="col-xs-12 col-sm-" + cfgData.columnWidth)
           h2.column-title= col.name
