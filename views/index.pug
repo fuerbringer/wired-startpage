@@ -5,10 +5,11 @@ block content
     h1= cfgData.pageTitle
     p= cfgData.pageDescription
 
-  .row
-    for col, title in colsData.columns
-      div.column(class="col-xs-12 col-sm-" + cfgData.columnWidth)
-        h2.column-title= title
-        ol.column-list
-          for page in col
-            li.column-entry: a(href=page.url)= page.title
+  for row in rows
+    .row
+      for col, i in row
+        div.column(class="col-xs-12 col-sm-" + cfgData.columnWidth)
+          h2.column-title= col.name
+          ol.column-list
+            for page in col.pages
+              li.column-entry: a(href=page.url)= page.title

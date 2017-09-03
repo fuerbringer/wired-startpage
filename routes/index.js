@@ -8,11 +8,10 @@ router.get('/', function(req, res, next) {
   var cols = new Columns()
 
   cfgData = cfg.getAll()
-  colsData = cols.getAll()
+  rows = cols.getRows(12 / cfg.getColumnWidth())
 
   res.render('index', {
-    cfgData,
-    colsData
+    cfgData, rows
   })
 })
 
