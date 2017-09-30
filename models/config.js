@@ -1,7 +1,17 @@
 const jsonfile = require('jsonfile')
 
-function Config(path = 'data/config.json') {
-  this.data = jsonfile.readFileSync(path)
+Config.DEFAULT_FILE = 'data/config.json'
+Config.EXAMPLE_FILE = Config.DEFAULT_FILE + '.example'
+
+function Config(path = Config.DEFAULT_FILE) {
+  try {
+    this.data = jsonfile.readFileSync(path)
+  } catch(error) {
+    this.data = jsonfile.readFileSync(Config.EXAMPLE_FILE)
+    if(error.code === 'ENOENT') {
+      console.log('`' + Config.DEFAULT_FILE + '` not found. Falling back to `' + Config.EXAMPLE_FILE + '`.')
+    }
+  }
 }
 
 Config.prototype.getAll = function() {

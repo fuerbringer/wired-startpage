@@ -1,7 +1,17 @@
 const jsonfile = require('jsonfile')
 
-function Columns(path = 'data/columns.json') {
-  this.data = jsonfile.readFileSync(path)
+Columns.DEFAULT_FILE = 'data/columns.json'
+Columns.EXAMPLE_FILE = Columns.DEFAULT_FILE + '.example'
+
+function Columns(path = Columns.DEFAULT_FILE) {
+  try {
+    this.data = jsonfile.readFileSync(path)
+  } catch(error) {
+    this.data = jsonfile.readFileSync(Columns.EXAMPLE_FILE)
+    if(error.code === 'ENOENT') {
+      console.log('`' + Columns.DEFAULT_FILE + '` not found. Falling back to `' + Columns.EXAMPLE_FILE + '`.')
+    }
+  }
 }
 
 Columns.prototype.getAll = function() {
