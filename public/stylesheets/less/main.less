@@ -28,19 +28,50 @@
 
 body {
   color: @wired-txt;
-  font: 22px @wired-font-text, sans-serif;
+  font: 24px @wired-font-text, sans-serif;
   background-color: @wired-bg;
+
+  h1, h2, h3, h4 {
+    color: @wired-header;
+    font-family: @wired-font-header, sans-serif;
+  }
 }
 
-h1, h2, h3, h4 {
-  color: @wired-header;
-  font-family: @wired-font-header, sans-serif;
+div.header {
+  h1 {
+    font-size: 36px;
+
+    /* Credit: https://codepen.io/ericrasch/pen/Irlpm */
+    position: relative;
+    z-index: 1;
+    &:before {
+        border-top: 2px solid @wired-txt;
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 95%;
+        z-index: -1;
+    }
+    span {
+        background: @wired-bg;
+        padding: 0 15px;
+    }
+  }
 }
 
-div.header h1 { font-size: 36px; }
-div.column h2 { font-size: 24px; }
-div.column h3 { font-size: 20px; }
-div.column h4 { font-size: 18px; }
+div.column {
+  h2 {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+}
 
 a, a:link, a:visited {
   color: @wired-link;
@@ -58,23 +89,32 @@ div.header {
   margin-bottom: 16px;
 }
 
-@media screen and (max-width: 991px) {
-  div.column h2 { font-size: 20px; }
-  div.column h3 { font-size: 18px; }
-  div.column h4 { font-size: 16px; }
-}
-
 /* COLUMN BOXES ***************************************************************/
 div.column {
   min-height: 256px;
   background-color: @wired-column-bg;
   border: @wired-column-border;
   background-clip: padding-box;
+
+  .column-entry a {
+    padding: 4px 4px 4px 0;
+    display: block;
+  }
+  li.column-entry {
+    margin: 2px 2px 2px 0;
+  }
 }
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 1080px) {
   div.column {
-    border: @wired-column-border-mobile;
+    border: @wired-column-border-mobile; /* Larger border */
+
+    li.column-entry {
+      margin: 2px 2px 15px 0;
+      border-bottom: 1px solid @wired-txt;
+      border-right: 1px dotted @wired-txt;
+    }
   }
 }
 

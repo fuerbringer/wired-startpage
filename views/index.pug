@@ -2,7 +2,7 @@ extends layout
 
 block content
   .row.header: .col-xs-12
-    h1= cfgData.pageTitle
+    h1: span= cfgData.pageTitle
     p= cfgData.pageDescription
 
   for row in rows
