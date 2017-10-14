@@ -14,5 +14,7 @@ html
     include overlays
     if(cfgData.mergeFrontendFiles)
       script: include ../public/javascripts/thirdparty/thirdparty.min.js
+      script: include ../public/javascripts/wired.js
     else
       script(src="/javascripts/thirdparty/thirdparty.min.js")
+      script(src="/javascripts/wired.js")
