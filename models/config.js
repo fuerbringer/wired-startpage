@@ -19,7 +19,7 @@ Config.prototype.getAll = function() {
 }
 
 Config.prototype.getColumnWidth = function() {
-  return this.data['columnWidth']
+  return this.data['columnWidth']['lg']
 }
 
 Config.prototype.getPageTitle = function() {
