@@ -1,21 +1,11 @@
 module.exports = function (grunt) {
   grunt.initConfig({
-    watch: {
-      dev: {
-        files: ['public/javascripts/*.js'],
-        task: ['uglify'],
-        options: {
-          nospawn: 'true',
-          interrupt: 'true'
-        }
-      }
-    },
     uglify: {
       static_js: {
         files: {
           'public/javascripts/thirdparty/thirdparty.min.js': [
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.min.js'
           ]
         }
       },
@@ -31,8 +21,8 @@ module.exports = function (grunt) {
           optimization: 2
         },
         files: {
-          "public/stylesheets/css/main.css": "public/stylesheets/less/main.less",
-          "public/stylesheets/css/overlay.css": "public/stylesheets/less/overlay.less"
+          'public/stylesheets/css/main.css': 'public/stylesheets/less/main.less',
+          'public/stylesheets/css/overlay.css': 'public/stylesheets/less/overlay.less'
         }
       }
     },
@@ -44,11 +34,11 @@ module.exports = function (grunt) {
       target: {
         files: {
           'public/stylesheets/thirdparty/thirdparty.min.css': [
-            'node_modules/bootstrap/dist/css/bootstrap.min.css',
+            'node_modules/bootstrap/dist/css/bootstrap.min.css'
           ],
           'public/stylesheets/minified/master.min.css': [
             'public/stylesheets/css/overlay.css',
-            'public/stylesheets/css/main.css',
+            'public/stylesheets/css/main.css'
           ]
         }
       }
@@ -59,6 +49,14 @@ module.exports = function (grunt) {
         tasks: ['less', 'cssmin'],
         options: {
           nospawn: true
+        }
+      },
+      dev: {
+        files: ['public/javascripts/*.js'],
+        task: ['uglify'],
+        options: {
+          nospawn: 'true',
+          interrupt: 'true'
         }
       }
     }
