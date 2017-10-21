@@ -3,12 +3,12 @@ const router = express.Router()
 const Config = require('../models/config')
 const Columns = require('../models/columns')
 
-router.get('/', function(req, res, next) {
+router.get('/', function (req, res, next) {
   var cfg = new Config()
   var cols = new Columns()
 
-  cfgData = cfg.getAll()
-  rows = cols.getRows(12 / cfg.getColumnWidth())
+  var cfgData = cfg.getAll()
+  var rows = cols.getRows(12 / cfg.getColumnWidth())
 
   res.render('index', {
     cfgData, rows
