@@ -4,7 +4,11 @@
   "version": "0.0.0",
   "license": "AGPL-3.0",
   "scripts": {
-    "start": "grunt & node ./bin/www"
+    "start": "grunt & node ./bin/www",
+    "test": "node ./node_modules/standard/bin/cmd.js"
+  },
+  "standard": {
+    "globals": [ "$" ]
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -21,10 +25,13 @@
   },
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-continue": "^0.1.0",
     "grunt-contrib-cssmin": "^2.2.1",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-run": "^0.7.0"
+    "grunt-run": "^0.7.0",
+    "grunt-standard": "^3.1.0",
+    "standard": "^10.0.3"
   }
 }

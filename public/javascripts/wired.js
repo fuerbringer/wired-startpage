@@ -1,5 +1,5 @@
 function isBatteryPowered () {
-  return battery = navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery
+  return navigator.battery || navigator.webkitBattery || navigator.mozBattery || navigator.msBattery
 }
 
 /**

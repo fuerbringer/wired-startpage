@@ -1,3 +1,7 @@
+const packageConfig = require('./package.json')
+
+console.log('Set Globals: ', packageConfig.standard.globals, '\n')
+
 module.exports = function (grunt) {
   grunt.initConfig({
     uglify: {
@@ -48,23 +52,36 @@ module.exports = function (grunt) {
         files: ['public/stylesheets/less/*.less'],
         tasks: ['less', 'cssmin'],
         options: {
-          nospawn: true
+          spawn: false
         }
       },
       dev: {
-        files: ['public/javascripts/*.js'],
-        task: ['uglify'],
+        files: ['{,models/,public/javascripts/,routes/}*.js'],
+        tasks: ['continue:on', 'standard', 'continue:off', 'uglify'],
         options: {
-          nospawn: 'true',
-          interrupt: 'true'
+          spawn: false,
+          interrupt: true
         }
+      }
+    },
+    standard: {
+      app: {
+        options: {
+          fix: 'true',
+          globals: packageConfig.standard.globals
+        },
+        src: [
+          '{,models/,public/javascripts/,routes/}*.js'
+        ]
       }
     }
   })
 
+  grunt.loadNpmTasks('grunt-continue')
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-cssmin')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.registerTask('default', ['uglify', 'less', 'cssmin', 'watch'])
+  grunt.loadNpmTasks('grunt-standard')
+  grunt.registerTask('default', ['continue:on', 'standard', 'continue:off', 'uglify', 'less', 'cssmin', 'watch'])
 }
