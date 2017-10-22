@@ -5,7 +5,8 @@ function isBatteryPowered () {
 /**
  * Disables CSS scanlines if viewport width <= {threshold}px or battery powered
  */
-function disableScanlines (threshold = 1080) {
+function disableScanlines (threshold) {
+  threshold = (threshold === undefined ? 1080 : threshold)
   if ($(window).width() <= threshold || isBatteryPowered()) {
     $('#overlay, #overlay2').remove()
   }

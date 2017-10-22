@@ -3,10 +3,8 @@ html
   head
     title= cfgData.pageTitle
     if(cfgData.mergeFrontendFiles)
-      style: include ../public/stylesheets/thirdparty/thirdparty.min.css
       style: include ../public/stylesheets/minified/master.min.css
     else
-      link(rel='stylesheet', href='/stylesheets/thirdparty/thirdparty.min.css')
       link(rel='stylesheet', href='/stylesheets/minified/master.min.css')
 
     link(rel="apple-touch-icon" sizes="180x180" href="/images/static-assets/favicons/apple-touch-icon.png")
@@ -25,8 +23,6 @@ html
       block content
     include overlays
     if(cfgData.mergeFrontendFiles)
-      script: include ../public/javascripts/thirdparty/thirdparty.min.js
-      script: include ../public/javascripts/wired.js
+      script: include ../public/javascripts/minified/master.min.js
     else
-      script(src="/javascripts/thirdparty/thirdparty.min.js")
-      script(src="/javascripts/wired.js")
+      script(src="/javascripts/minified/master.min.js")

@@ -7,9 +7,10 @@ module.exports = function (grunt) {
     uglify: {
       static_js: {
         files: {
-          'public/javascripts/thirdparty/thirdparty.min.js': [
+          'public/javascripts/minified/master.min.js': [
             'node_modules/jquery/dist/jquery.min.js',
-            'node_modules/bootstrap/dist/js/bootstrap.min.js'
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'public/javascripts/wired.js'
           ]
         }
       },
@@ -37,10 +38,8 @@ module.exports = function (grunt) {
       },
       target: {
         files: {
-          'public/stylesheets/thirdparty/thirdparty.min.css': [
-            'node_modules/bootstrap/dist/css/bootstrap.min.css'
-          ],
           'public/stylesheets/minified/master.min.css': [
+            'node_modules/bootstrap/dist/css/bootstrap.min.css',
             'public/stylesheets/css/overlay.css',
             'public/stylesheets/css/main.css'
           ]
