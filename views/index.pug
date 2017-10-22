@@ -8,7 +8,7 @@ block content
   .row.row-equal-height
     for row in rows
       for col, i in row
-        div.column(class="col-xs-" + cfgData.columnWidth.xs + " col-sm-" + cfgData.columnWidth.sm + " col-md-" + cfgData.columnWidth.md + " col-lg-" + cfgData.columnWidth.lg)
+        div.column(class="col-xs-" + cfgData.bootstrapCols.xs + " col-sm-" + cfgData.bootstrapCols.sm + " col-md-" + cfgData.bootstrapCols.md + " col-lg-" + cfgData.bootstrapCols.lg)
           h2.column-title= col.name
           ol.column-list
             for page in col.pages

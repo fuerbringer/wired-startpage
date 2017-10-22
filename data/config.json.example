@@ -1,7 +1,7 @@
 {
   "pageTitle": "The Wired Startpage",
   "pageDescription": "Welcome to the Wired Startpage",
-  "columnWidth": {
+  "bootstrapCols": {
     "xs": "12",
     "sm": "6",
     "md": "4",
