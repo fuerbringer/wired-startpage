@@ -10,6 +10,22 @@ Columns and entries are easily added or customized via the `columns.json` file.
 
 ## Installation
 
+### Configuration file `.env`
+
+These are the default environment variables. They can be overridden by redefining them in the `.env` file in root.
+
+```
+EXPRESS_HOST=0.0.0.0
+EXPRESS_PORT=3000
+DATA_MONGO_NAME=gonano
+```
+
+#### Notes
+
+- For `DATA_MONGO_NAME`, the default value as defined by nanobox.io is `gonano`.
+- `DATA_MONGO_HOST` is automatically set by nanobox. Override if needed.
+- `DATA_MONGO_USER` and `DATA_MONGO_PASS` not used by default. Override if needed.
+
 ### Docker
 
 Run this if you've got Docker set up.
