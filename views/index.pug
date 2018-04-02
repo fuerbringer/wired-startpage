@@ -2,11 +2,15 @@ extends layout
 
 block content
   .row.header: .col-xs-12
-    h1: span= cfgData.pageTitle
-    p= cfgData.pageDescription
+    h1: span#page-title
+    p#page-description
 
-  .row.row-equal-height
-    for row in rows
+  .row.row-equal-height(ng-controller='repeatController')
+    ul
+      li(ng-repeat='category in categories')
+        p {{category.name}}
+
+    // for row in rows
       for col, i in row
         div.column(class="col-xs-" + cfgData.bootstrapCols.xs + " col-sm-" + cfgData.bootstrapCols.sm + " col-md-" + cfgData.bootstrapCols.md + " col-lg-" + cfgData.bootstrapCols.lg)
           h2.column-title= col.name
