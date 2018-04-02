@@ -8,20 +8,30 @@
     "test": "node ./node_modules/standard/bin/cmd.js"
   },
   "standard": {
-    "globals": [ "$" ]
+    "globals": [
+      "$",
+      "angular",
+      "localStorage",
+      "fetch",
+      "swal"
+    ]
   },
   "dependencies": {
+    "angular": "^1.6.9",
     "body-parser": "~1.17.1",
     "bootstrap": "~3.3.7",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
+    "dotenv": "^5.0.1",
     "express": "~4.15.2",
+    "graphql.js": "^0.4.20",
     "jquery": "^3.2.1",
     "jsonfile": "^3.0.1",
     "less-middleware": "~2.2.0",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "sweetalert2": "^7.18.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

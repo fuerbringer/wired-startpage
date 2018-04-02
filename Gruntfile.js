@@ -7,10 +7,15 @@ module.exports = function (grunt) {
     uglify: {
       static_js: {
         files: {
-          'public/javascripts/minified/master.min.js': [
+          'public/javascript/minified/master.min.js': [
+            // Vendor libraries
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'public/javascripts/wired.js'
+            'node_modules/angular/angular.js',
+            'node_modules/sweetalert2/dist/sweetalert2.all.min.js',
+            // Custom js
+            'public/javascript/wired.js',
+            'public/javascript/controller.js'
           ]
         }
       },
@@ -55,7 +60,7 @@ module.exports = function (grunt) {
         }
       },
       dev: {
-        files: ['{,models/,public/javascripts/,routes/}*.js'],
+        files: ['{,models/,public/javascript/,routes/}*.js'],
         tasks: ['continue:on', 'standard', 'continue:off', 'uglify'],
         options: {
           spawn: false,
@@ -70,7 +75,7 @@ module.exports = function (grunt) {
           globals: packageConfig.standard.globals
         },
         src: [
-          '{,models/,public/javascripts/,routes/}*.js'
+          '{,models/,public/javascript/,routes/}*.js'
         ]
       }
     }

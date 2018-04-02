@@ -1,8 +1,8 @@
 doctype html
-html
+html(ng-app='wired-startpage')
   head
-    title= cfgData.pageTitle
-    if(cfgData.mergeFrontendFiles)
+    title
+    if(process.env.NODE_ENV === 'production')
       style: include ../public/stylesheets/minified/master.min.css
     else
       link(rel='stylesheet', href='/stylesheets/minified/master.min.css')
@@ -13,7 +13,7 @@ html
     .container: .row: .col-xs-12
       block content
     include overlays
-    if(cfgData.mergeFrontendFiles)
-      script: include ../public/javascripts/minified/master.min.js
+    if(process.env.NODE_ENV === 'production')
+      script: include ../public/javascript/minified/master.min.js
     else
-      script(src="/javascripts/minified/master.min.js")
+      script(src="/javascript/minified/master.min.js")
