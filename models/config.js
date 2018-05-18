@@ -1,13 +1,14 @@
-const jsonfile = require('jsonfile')
+const fs = require('fs')
+const yaml = require('js-yaml')
 
-Config.DEFAULT_FILE = 'data/config.json'
+Config.DEFAULT_FILE = 'data/config.yaml'
 Config.EXAMPLE_FILE = Config.DEFAULT_FILE + '.example'
 
 function Config (path = Config.DEFAULT_FILE) {
   try {
-    this.data = jsonfile.readFileSync(path)
+    this.data = yaml.safeLoad(fs.readFileSync(path, 'utf-8'))
   } catch (error) {
-    this.data = jsonfile.readFileSync(Config.EXAMPLE_FILE)
+    this.data = yaml.safeLoad(fs.readFileSync(Config.EXAMPLE_FILE, 'utf-8'))
     if (error.code === 'ENOENT') {
       console.log('`' + Config.DEFAULT_FILE + '` not found. Falling back to `' + Config.EXAMPLE_FILE + '`.')
     }

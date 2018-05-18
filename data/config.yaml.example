@@ -1,0 +1,17 @@
+---
+pageTitle: The Wired Startpage
+pageDescription: Welcome to the Wired Startpage
+bootstrapCols:
+  xs: '12'
+  sm: '6'
+  md: '4'
+  lg: '3'
+mergeFrontendFiles: false
+overlayImages:
+  top:
+    left: ''
+    right: ''
+  bottom:
+    left: smug.png
+    right: ''
+
