@@ -1,0 +1,11 @@
+---
+name: Even more sites 3
+pages:
+- title: A site 1
+  url: http://localhost
+- title: Some site 2
+  url: http://localhost
+- title: And another site 3
+  url: http://localhost
+- title: Idk site 4
+  url: http://localhost

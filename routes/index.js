@@ -9,6 +9,7 @@ router.get('/', function (req, res, next) {
 
   var cfgData = cfg.getAll()
   var rows = cols.getRows(12 / cfg.getColumnWidth())
+  // console.log(cfgData)
 
   res.render('index', {
     cfgData, rows
