@@ -2,7 +2,13 @@
 
 A ~~simple~~, stupid startpage inspired by [SEL](https://en.wikipedia.org/wiki/Serial_Experiments_Lain). Design ~~blatantly stolen from~~ heavily inspired by [Lainchan](https://lainchan.org).
 
-Columns and entries are easily added or customized via the `columns.json` file.
+## Usage
+
+### Adding new bookmarks
+
+Data is stored in flat files to keep things simple. The tiles you see in the screenshot below are each one `.yaml` file inside of `/data/tiles/`. You can use `/data/tile.example.yaml` as a template:
+
+```cp data/tile.example.yaml data/tile/mysites.yaml```
 
 ## Screenshot
 
