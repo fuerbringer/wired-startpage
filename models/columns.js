@@ -2,7 +2,7 @@ const fs = require('fs')
 const yaml = require('js-yaml')
 
 Columns.DEFAULT_TILES = 'data/tiles/'
-Columns.EXAMPLE_TILE = 'data/tile.example.yaml'
+Columns.EXAMPLE_TILE = 'data/tile.yaml.example'
 
 function Columns (path = Columns.DEFAULT_FILE) {
   this.data = {
