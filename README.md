@@ -51,8 +51,12 @@ npm install
 Edit config and data files.
 
 ```
-cp data/config.json.example data/config.json
-cp data/columns.json.example data/columns.json
+cp data/tile.yaml.example data/tiles/chans.yaml   # Create a tile with a title and links
+```
+
+
+```
+cp data/config.yaml.example data/config.yaml      # Create a custom configuration file
 ```
 
 #### Step 3
